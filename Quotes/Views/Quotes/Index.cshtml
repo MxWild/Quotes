@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Quotes>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+    <h2>Цитаты</h2>
+    <p>
+        @Html.ActionLink("Добавить цитату", "Create", new { @type="button" }, new { @class = "btn btn-warning" })
+    </p>
+
+  @foreach (var item in Model) {
+        <blockquote>
+            @Html.DisplayFor(modelItem => item.QuoteText)
+            <footer>@Html.DisplayFor(modelItem => item.NameOfAuthor)</footer>
+            <footer>@Html.DisplayFor(modelItem => item.Category.CategoryName)</footer>
+            <p class="small">@Html.DisplayFor(modelItem => item.DateAdded)</p>
+            <div class="btn-group">
+                @Html.ActionLink("Edit", "Edit", new { id = item.QuoteId }, new { @class = "btn btn-primary" })
+                @Html.ActionLink("Details", "Details", new { id = item.QuoteId }, new { @class = "btn btn-info" })
+                @Html.ActionLink("Delete", "Delete", new { id = item.QuoteId }, new { @class = "btn btn-danger" })
+            </div>
+        </blockquote>
+        
+    }
+    
+    <p>
+            @Html.ActionLink("Добавить цитату", "Create", new { @type="button" }, new { @class = "btn btn-warning" })
+    </p>
+   
+</div>
+
