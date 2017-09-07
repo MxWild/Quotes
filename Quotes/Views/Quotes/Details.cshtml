@@ -1,17 +1,17 @@
 ﻿@model Quotes
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Информация о цитате";
 }
 
-<h2>Details</h2>
+<h2>Информация о цитате</h2>
 
 <div>
-    <h4>Quotes</h4>
+    
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.QuoteText)
+            Цитата
         </dt>
 
         <dd>
@@ -19,7 +19,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DateAdded)
+           Дата добавления
         </dt>
 
         <dd>
@@ -27,7 +27,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.NameOfAuthor)
+            Автор цитаты
         </dt>
 
         <dd>
@@ -35,7 +35,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Category.CategoryName)
+            Категория
         </dt>
 
         <dd>
@@ -45,6 +45,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.QuoteId }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Редактировать", "Edit", new { id = Model.QuoteId }) |
+    @Html.ActionLink("Вернуться к списку", "Index")
 </p>
