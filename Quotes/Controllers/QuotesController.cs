@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using Quotes;
 
+// Класс для связки
 namespace Quotes.Controllers
 {
     public class QuotesController : Controller
